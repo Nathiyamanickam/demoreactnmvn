@@ -1,65 +1,102 @@
-import React from "react";
-class App extends React.Component
+function App()
 {
-  render()
-
+  if(true)
   {
-    return(<>
-    <h1>Welcome to class components</h1>
-     <h1>Welcome to class components</h1>
-      <h1>Welcome to class components</h1>
-       <h1>Welcome to class components</h1>
-       <hr></hr>
-       <p>In adipisicing veniam est do et nostrud. Dolor aliquip veniam nulla incididunt commodo voluptate adipisicing dolore id commodo. Duis magna quis amet velit nostrud esse anim id dolore enim et. Sint esse commodo ad do eu. Officia cupidatat velit pariatur ad do tempor ullamco laboris consequat adipisicing ullamco ullamco ut.
-
-Non tempor eu quis exercitation. Officia anim consequat veniam ipsum dolore nisi veniam fugiat. Cupidatat anim ipsum ad esse minim enim est do irure laboris tempor consectetur elit anim. Sit sunt exercitation aliqua laborum occaecat in labore elit dolore veniam qui adipisicing nostrud. Elit nulla ea elit dolore aute minim labore exercitation.
-
-Cillum ad sint laboris labore elit ut culpa irure incididunt. Dolor elit voluptate eu Lorem sint ut ad duis voluptate. Laborum qui et ullamco aliquip cupidatat cillum esse do deserunt veniam.
-
-Sunt qui quis ex adipisicing ad duis et incididunt. Tempor est incididunt qui quis. Amet occaecat nostrud anim voluptate nostrud laboris commodo aliqua dolor sunt. Ad magna velit qui laborum officia sit aliqua. Aute occaecat ad et eu aute fugiat minim do aliquip non laborum. Ad velit laborum sit do dolor commodo in. Minim commodo elit sit minim minim.
-
-Pariatur adipisicing nostrud sint elit minim enim deserunt officia anim sint. Reprehenderit aliquip enim esse esse elit anim quis officia enim est. Aliqua deserunt velit velit deserunt excepteur ad id nostrud occaecat consequat officia esse veniam. Et officia incididunt esse cupidatat laboris in ipsum consequat consequat. Cillum nisi ullamco dolore officia dolore in.</p>
-    </>
-
-    )
+    var v=100
+    v++
+    let l=200
+    l++
+    console.log("let"+l);
+   
   }
+  return(
+    <>
+    <h1>Variable  global :{v}</h1>
+    <h1>Let and Const does not work : because local <br></br> Var is Global</h1>
+    </>
+  )
 }
-export default App
+export  default App
 
 // function App()
 // {
+//   let myfun=(a,b,c)=>{
+//     var tot=a+b+c
+//       document.getElementById("res").innerHTML=`<h2>Total:</h2>${tot}`;
+//   }
+//   return(<>
+
+
+//    <h2>Arrow function with parameter</h2>
+//   <h3> onClick "c" must be capital <br></br> Dont use double quotes <br></br> While Calling Function dont use parenthesis without passing args</h3>
+//   <button onClick={()=>myfun(10,20,30)}>Click me</button>
+//   <div id="res"></div>
+
+
+//   </>)
+// }
+// export default App
+
+// import myimg from './Images/Dora.jpeg'
+// function App(){
+//   return(<>
+//   <center>
+//   <h2> Image Demo using Path as Expression</h2>
+//   <img src={myimg} width="60%" height="500px" margin-left="25%" alt="Path is Wrong"></img>
+//   </center>
+//   </>)
+
+// }
+// export default App
+// function App(){
+//   var a=3000
+//   var b=200
+//   var c=400
 //   return(
-//     <div>
-//     <h1>Welcome To React JS</h1>
-//     <h1>Welcome To React JS</h1>
-//     <h1>Welcome To React JS</h1>
-//     </div>
+//     <>
+//     <h2>Largest Amoung 3 Numbers</h2>
+//     <h2>Largest Number:{a>b?(a>c?a:c):(b>c?b:c)}</h2>
+    
+
+//     </>
 //   )
 // }
 // export default App
 
-// import logo from './logo.svg';
-// import './App.css';
+/*function App(){
+  //Javascript learned code
+  var a=10
+  var b=30
+  var c="Sneha"
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+  return(<>
+       <h1>Total:{a+b}</h1>
+       <marquee bgcolor='blue'><font size='7'>{c}</font></marquee>
+  </>)
+}
+export default App
+import logo from './logo.svg';
+import './App.css';
 
-// export default App;
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;*/

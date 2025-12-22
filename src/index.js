@@ -4,10 +4,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+var sobj = {
+  rno: 1001,
+  sname: "Nathiya",
+  mark: [12,10,13,14],
+  rank: 1,
+  grade: "super",
+  location: "Velusamypuram",
+  issingle:true,
+  Phonenum:897654321,
+  hobbies:{
+    hob1:"dance",
+    hob2:"singing",
+    hob3:"reading"
+  }
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App data={sobj}/>
   </React.StrictMode>
 );
 

@@ -1,23 +1,253 @@
-function App(props)
-{
-  var a=props.data.rno
-  var b=props.data.sname
-  var c=props.data.issingle
-  var d=props.data.mark
-  var e=props.data.hobbies
+import key from "./Images/lock.jpg";
+import "./App.css";
+import React from "react";
 
-  return(<>
-  <h2>Type of rno: {typeof(a)}</h2>
-  <h2>Type of sname: {typeof(b)}</h2>
-  <h2>Type of issingle: {typeof(c)}</h2>
-  <h2>Type of mark: {typeof(d)}</h2>
-   <h3>{Array.isArray(d)?"It is Array":"It is object json"}</h3>
-  <h3>{Array.isArray(e)?"It is Array":"It is object json"}</h3>
+const App = () => {
+  return (
+    <div id="container">
+      <img src={key} className="icon" />
+
+      <h1 className="head">ADMIN PANEL</h1>
+
+      <div className="inputbox">
+        <input type="text"/>
+        <label>Username</label>
+      </div>
+
+      <div className="inputbox">
+        <input type="password" />
+        <label>Password</label>
+      </div>
+<div id="but"><button>LOGIN</button></div>
+      
+    </div>
+  )
+}
+
+export default App
+
+
+// import key from "./Images/images.jpg"
+// // import { useState } from 'react'
+// import "./App.css"; 
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//     <div id="container">
+//    <img src={key}></img>
+//       <h1 class="head">ADMIN PANEL</h1>
+//         <input id="one" type="text" placeholder="Username"></input>
+//           <input id="one" type="password" placeholder="Password"></input>
+//         <button>LOGIN</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import React from "react";
+// import { useEffect,useState } from "react";
+// const App=()=>{
+//   const [name,setName]=useState("Project")
+//   useEffect(()=>{
+//     document.title=`MY ${name}`
+//   })
+//   const dis=()=>{
+//     setName("1.Cafe 2.Store")
+//   }
+  
+//   return(
+//     <div>
+//       <h1>useEffect Hook</h1>
+//       <button onClick={dis}>Change Name</button><br>
+    
+    
+//       </br>
+//       {name}
+//     </div>
+
+//   )
+// }
+
+// export default App
+// import { useState } from 'react'
+// import React from 'react'
+
+// const App = () => {
+//    const [count,setCount] = useState(0);
+//     const no=()=>{
+//         setCount(count+1);
+//     }
+//   return (
+//     <div>
+//         <button onClick={no}>You Clicked : {count} times </button>
+//     </div>
+//   )
+// }
+
+// export default App 
+
+
+// import { useState } from "react";
+// import React from "react";
+
+// function App(){
+//   const [count,setCount] = useState(100);
+
+//   const no =(event)=>{
+//     if(event.target.id==="b1")
+//     setCount(count+1);
+//   if(event.target.id==="b2")
+//     setCount(count-1)
+//    if(event.target.id==="b3")
+//     setCount(count-5)
+//   }
+
+//   return (
+//     <div>
+//       <h1>Task increment/decrement</h1>
+//       <button id="b1" onClick={no}>Increment</button>
+//       <button id="b2" onClick={no}>Decrement</button>
+//       <button id="b3" onClick={no}>Decrement by 5</button>
+//       <h1>{count}</h1>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+
+
+// import { useState } from 'react'
+// import React from 'react'
+
+
+// const App = () => {
+//    const [name,setName]=useState("---")
+//   const dis=(event)=>{
+//     setName(event.target.value)
+//   }
+//   const show=(v)=>{
+//     console.log(v)
+//   }
+//   const find=(e1,e2)=>{
+//        console.log(e1+e2)
+//   }
+//   return (
+//     <div>
+//       <center>
+//         <form>
+//        <h1>Form</h1>
+      
+
+//       <label><b>Username:</b> </label>
+//       <input type="text" placeholder="Enter user Name" value={name} onChange={dis}></input><br></br>  <br></br>
+
+//       <label><b>Pssword: </b></label>
+//       <input type="password" onChange={()=>show("12345")} placeholder="Enter your password"></input><br></br> <br></br>
+
+//       <label><b>Account Number: </b> </label>
+//       <input type="number" onChange={()=>find(12,3)} placeholder="Enter your acc num"></input><br></br> <br></br>
+
+//       <label><b>E-mail: </b></label>
+//        <input type="email" placeholder="Enter your email"></input><br></br>
+
+//       <label><b>Select Gender:</b></label>
+//        <input type="radio" name="gen"></input>Male
+//        <input type="radio" name="gen"></input>Female
+//        <input type="radio" name="gen"></input>Others <br></br>
+
+//      <label><b>Select Course:</b></label>
+//       <input type="checkbox" name="gen"></input>c
+//       <input type="checkbox" name="gen"></input>Java
+//       <input type="checkbox" name="gen"></input>c++
+//       <input type="checkbox" name="gen"></input>python
+//       <input type="checkbox" name="gen"></input>None of these
+//      <br></br>
+     
+//       <label><b>Month: </b></label>
+//       <select>
+//           <option selected>Select Month</option>
+//           <option>January</option>
+//           <option>February</option>
+//           <option>March</option>
+//           <option>April</option>
+//           <option>May</option>
+//           <option>June</option>
+//           <option>July</option>
+//           <option>August</option>
+//           <option>September</option>
+//           <option>October</option>
+//           <option>November</option>
+//           <option>December</option>
+//       </select>
+//             <br></br>
+//             <br></br>
+       
+//       <b>Week: </b> <select size="6" name="week" multiple>
+//         <option>Monday</option>
+//         <option>Tuesday</option>
+//         <option>Wednesday</option>
+//         <option>Thursday</option>
+//         <option>Friday</option>
+//         <option>Saturday</option>
+//         <option>Sunday</option>
+//        </select>
+//         <br></br>
+//       <b>Select color: </b> <input type="color" name="col"></input><br></br>
+//       <b>Select DOB: </b><input type="date" name="date"></input><br></br>
+//       <b>Select Time: </b><input type="time" name="time"></input><br></br>
+//       <b>Select Week:</b><input type="week" name="week"></input><br></br>
+//       <b>Upload File: </b> <input type="file"></input><br></br>
+//       <label>  <b>Type your feeback:</b></label>
+//       <textarea rows="7" cols="25"></textarea><br></br>
+//       <label><b>Volume: </b></label>
+//        <input type="range" min="0" max="6"></input><br></br>
+//        <label><b>Progress bar 90% Completed: </b></label>
+//        👍👌🙌✌️💖<progress style={{backgroundColor:'green',border:'2px solid cyan'}}min="0" max="100" value="90"></progress>
+//        <br></br>
+
+
+
+
+//         <button><b><s>Clickme</s></b></button>
+//         <input type="button" value="Submit"></input>
+//         <button><b>Clickme</b></button>
+//  </form>
+//          </center>
+        
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+// function App(props)
+// {
+//   var a=props.data.rno
+//   var b=props.data.sname
+//   var c=props.data.issingle
+//   var d=props.data.mark
+//   var e=props.data.hobbies
+
+//   return(<>
+//   <h2>Type of rno: {typeof(a)}</h2>
+//   <h2>Type of sname: {typeof(b)}</h2>
+//   <h2>Type of issingle: {typeof(c)}</h2>
+//   <h2>Type of mark: {typeof(d)}</h2>
+//    <h3>{Array.isArray(d)?"It is Array":"It is object json"}</h3>
+//   <h3>{Array.isArray(e)?"It is Array":"It is object json"}</h3>
   
 
-  </>)
-}
-export default App
+//   </>)
+// }
+// export default App
 
 // import parse from "html-react-parser"
 

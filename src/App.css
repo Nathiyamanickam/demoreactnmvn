@@ -1,4 +1,115 @@
-.App {
+
+body{
+  margin:0;
+  background:rgb(24, 212, 190);
+
+}
+
+img{
+  border-radius:50px;
+  position: relative;
+   animation-name: icon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes icon {
+  from {
+    /* left: 0px;
+    top: 0px; */
+    transform: rotate(0deg);
+  }
+  to {
+    /* left: 100px;
+    top: 40px; */
+       transform: rotate(360deg);
+  }
+}
+
+#container{
+ 
+  width:320px;
+  margin:100px auto;
+  /* transform: translate(50%,50%); */
+  padding:10px;
+  text-align:center;
+  background:rgba(0, 0, 0, 0.959);
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px 10px rgb(32, 32, 32);
+   
+
+}
+
+
+.icon{
+  width:70px;
+  /* margin-bottom:10px; */
+}
+
+.head{
+  color:white;
+  /* margin-bottom:25px; */
+}
+
+
+.inputbox{
+  position:relative;
+  margin:25px 0;
+}
+
+
+.inputbox input{
+  width:95%;
+  padding:10px 5px;
+  background:transparent;
+  border:none;
+  border-bottom:2px solid rgb(24, 212, 190);
+  color:white;
+  font-size:13px;
+  outline:none;
+}
+
+
+.inputbox input:focus{
+  border-bottom:2px double rgb(24, 212, 190);
+}
+
+
+.inputbox label{
+  position:absolute;
+  left:5px;
+  top:10px;
+  color:#ccc;
+  font-size:16px;
+ 
+}
+
+
+.inputbox input:focus + label{
+  top:-10px;
+  font-size:9px;
+  color:rgb(238, 241, 243);
+}
+
+#but{
+  text-align:right;
+}
+button{
+  width:120px;
+  padding:2px;
+  margin-top:25px;
+  color:  rgb(24, 212, 190);
+    background: rgba(0, 0, 0, 0.6);
+  border:1px solid rgb(24, 212, 190);
+  font-size:16px;
+  
+  border-radius:5px;
+}
+
+
+/* 
+
+.App{
   text-align: center;
 }
 
@@ -35,4 +146,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

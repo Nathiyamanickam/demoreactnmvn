@@ -1,30 +1,95 @@
-import key from "./Images/lock.jpg";
-import "./App.css";
-import React from "react";
+import { useState } from 'react'
+import React from 'react'
+function App(){
+  const [city,setCity]=useState("karur")
+  const [list,setList]=useState(null)
 
-const App = () => {
+  const upcity=(event)=>{
+   setCity(event.target.value);
+  }
+  const findweather=()=>{
+    console.log("city name:",city);
+    var api=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3816122d9523743216ba0a570b459537`;
+
+       fetch(api)
+        .then((response)=>response.json())
+        .then((data)=>{
+            console.log(data)
+            setList(data)
+         
+               
+        })
+        .catch((err)=>{
+            console.log("" +err);
+            setList(err)
+           
+        })
+  }
+
+
   return (
-    <div id="container">
-      <img src={key} className="icon" />
-
-      <h1 className="head">ADMIN PANEL</h1>
-
-      <div className="inputbox">
-        <input type="text"/>
-        <label>Username</label>
-      </div>
-
-      <div className="inputbox">
-        <input type="password" />
-        <label>Password</label>
-      </div>
-<div id="but"><button>LOGIN</button></div>
+    <>
+      <h2><center>Fetch - API</center></h2>
+      <h2>Weather Report</h2>
       
-    </div>
-  )
+      <label>Enter City Name:</label><input type="text" value={city} onChange={upcity}></input>
+   <br></br>
+   <input type="button" onClick={findweather} value="GetReport"></input>
+<br></br>
+
+{list && list.cod===200 &&
+<>
+
+<h2>Final Report</h2>
+<h3>Main Report: {list !== null && list.weather[0].main}</h3>
+<h3>Description:{list !== null && list.weather[0].description}</h3>
+<h3>Wind SPeed: {list !== null && list.wind. speed}</h3>
+<h3>Temperature: {list !== null && list.main.temp}</h3>
+<h3>Humidity:{list !== null && list.main.humidity}</h3>
+</>
+}
+{list && list.cod==="404" &&
+<h3>Error Message: {list !== null && list.cod === '404' && list.message}</h3>
+
 }
 
+    </>
+)
+
+}
+
+
 export default App
+
+
+// import key from "./Images/lock.jpg";
+// import "./App.css";
+// import React from "react";
+
+// const App = () => {
+//   return (
+//     <div id="container">
+//       <img src={key} className="icon" />
+
+//       <h1 className="head">ADMIN PANEL</h1>
+
+//       <div className="inputbox">
+//         <input type="text"/>
+//         <label>Username</label>
+//       </div>
+
+//       <div className="inputbox">
+//         <input type="password" />
+//         <label>Password</label>
+//       </div>
+// <div id="but"><button>LOGIN</button></div>
+
+      
+//     </div>
+//   )
+// }
+
+// export default App
 
 
 // import key from "./Images/images.jpg"
